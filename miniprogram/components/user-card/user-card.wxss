@@ -1,0 +1,254 @@
+page {
+	/* Color 可以自定义相关配色 */
+	/* var属性兼容性 --> https://www.caniuse.com/#feat=css-variables */
+	/* 标准色 */
+	--red: #e54d42;
+	--orange: #f37b1d;
+	--yellow: #fbbd08;
+	--olive: #8dc63f;
+	--green: #39b54a;
+	--cyan: #1cbbb4;
+	--blue: #0081ff;
+	--purple: #6739b6;
+	--mauve: #9c26b0;
+	--pink: #e03997;
+	--brown: #a5673f;
+	--grey: #8799a3;
+	--black: #333333;
+	--darkGray: #666666;
+	--gray: #aaaaaa;
+	--ghostWhite: #f1f1f1;
+	--white: #ffffff;
+	/* 浅色 */
+	--redLight: #fadbd9;
+	--orangeLight: #fde6d2;
+	--yellowLight: #fef2ce;
+	--oliveLight: #e8f4d9;
+	--greenLight: #d7f0db;
+	--cyanLight: #d2f1f0;
+	--blueLight: #cce6ff;
+	--purpleLight: #e1d7f0;
+	--mauveLight: #ebd4ef;
+	--pinkLight: #f9d7ea;
+	--brownLight: #ede1d9;
+	--greyLight: #e7ebed;
+	/* 渐变色 */
+	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
+	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
+	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
+	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
+	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
+	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
+	/* 阴影透明色 */
+	--ShadowSize: 6rpx 6rpx 8rpx;
+	--redShadow: rgba(204, 69, 59, 0.2);
+	--orangeShadow: rgba(217, 109, 26, 0.2);
+	--yellowShadow: rgba(224, 170, 7, 0.2);
+	--oliveShadow: rgba(124, 173, 55, 0.2);
+	--greenShadow: rgba(48, 156, 63, 0.2);
+	--cyanShadow: rgba(28, 187, 180, 0.2);
+	--blueShadow: rgba(0, 102, 204, 0.2);
+	--purpleShadow: rgba(88, 48, 156, 0.2);
+	--mauveShadow: rgba(133, 33, 150, 0.2);
+	--pinkShadow: rgba(199, 50, 134, 0.2);
+	--brownShadow: rgba(140, 88, 53, 0.2);
+	--greyShadow: rgba(114, 130, 138, 0.2);
+	--grayShadow: rgba(114, 130, 138, 0.2);
+	--blackShadow: rgba(26, 26, 26, 0.2);
+
+	background-color: var(--ghostWhite);
+	font-size: 28rpx;
+	color: var(--black);
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+.bg-red {
+	background-color: var(--red);
+	color: var(--white);
+}
+
+.bg-orange {
+	background-color: var(--orange);
+	color: var(--white);
+}
+
+.bg-yellow {
+	background-color: var(--yellow);
+	color: var(--black);
+}
+
+.bg-olive {
+	background-color: var(--olive);
+	color: var(--white);
+}
+
+.bg-green {
+	background-color: var(--green);
+	color: var(--white);
+}
+
+.bg-cyan {
+	background-color: var(--cyan);
+	color: var(--white);
+}
+
+.bg-blue {
+	background-color: var(--blue);
+	color: var(--white);
+}
+
+.bg-purple {
+	background-color: var(--purple);
+	color: var(--white);
+}
+
+.bg-mauve {
+	background-color: var(--mauve);
+	color: var(--white);
+}
+
+.bg-pink {
+	background-color: var(--pink);
+	color: var(--white);
+}
+
+.bg-brown {
+	background-color: var(--brown);
+	color: var(--white);
+}
+
+.bg-grey {
+	background-color: var(--grey);
+	color: var(--white);
+}
+
+.bg-gray {
+	background-color: #f0f0f0;
+	color: var(--black);
+}
+
+.bg-black {
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.bg-white {
+	background-color: var(--white);
+	color: var(--darkGray);
+}
+.container{
+    background-color: #fff;
+    border-radius: 15rpx;
+    margin: 10rpx;
+}
+.list-item{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 5rpx;
+    margin-left: 10rpx;
+}
+.icon{
+    display: flex;
+    align-items: center;
+}
+.icon-dot{
+    display: inline-block;
+    width: 20rpx;
+    height: 20rpx;
+    vertical-align: middle;
+    margin-right: 15rpx;
+    border-radius: 20rpx;
+}
+.text{
+    padding: 5rpx;
+    flex-wrap: wrap;
+}
+.top-info{
+    padding: 10rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    width: 20%;
+    height: 50rpx;
+    padding-top: 10rpx;
+}
+.nav-btn{
+    font-size: 12px;
+    color: #5677fc;
+    border-radius: 0;
+    background-color: #fff;
+    border-radius: 0;
+    margin: 0rpx;
+    padding: 0rpx;
+}
+.nav-btn-hover{
+    color: #000;
+}
+.nav-btn::after{
+    border: none;
+    border-radius: 0;
+}
+.user-list{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 5rpx;
+    margin-left: 10rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.detail-all{
+    width: 100%;
+}
+.detail{
+    width: 90%;
+}
+.opear{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete{
+   width: 40rpx;
+    height: 40rpx;
+    background-size: 40rpx 40rpx;
+    background-image:url('data:image/png;base64,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');
+}
+.opear-btn{
+    width: 45rpx;
+    height: 45rpx;
+    line-height: 20px;
+    font-size: 28rpx;
+    color: #fff;
+    border-radius: 50%;
+    background-color: var(--red);
+    margin: 0rpx;
+    padding: 0rpx;
+}
+.opear-btn-hover{
+    color: #fff;
+    background-color: #cc3633;
+}
+.opear-btn::after{
+    border: none;
+    border-radius: 0;
+}
+.user-list-item{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    padding-top: 5rpx;
+}
+.type-0
+.type-1{
+    padding-bottom: 5rpx;
+}

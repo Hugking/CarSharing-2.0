@@ -1,0 +1,63 @@
+<!--components/user-card/user-card.wxml-->
+<view class="container">
+	<view class="type-0" wx:if="{{type==0}}">
+		<view class="list-item">
+			<view class="top-info">
+				<view class="title">司机信息</view>
+				<view class="nav">
+					<button class="nav-btn" hover-class="nav-btn-hover" bindtap="detail">查看详情 ></button>
+				</view>
+			</view>
+		</view>
+		<view class="list-item" bind:tap="callPhone" data-tel="{{driverInfo.tel}}">
+			<view class="icon">
+				<view class="icon-dot bg-green" />
+			</view>
+			<view class="text">
+				{{driverInfo.nickName}} / {{driverInfo.tel}} (点击拨打)
+			</view>
+		</view>
+		<view class="list-item">
+			<view class="icon">
+				<view class="icon-dot bg-pink" />
+			</view>
+			<view class="text">
+				{{driverInfo.carNum}}{{driverInfo.carColor?" / ("+driverInfo.carColor+")":''}}
+			</view>
+		</view>
+	</view>
+	<view class="type-1" wx:if="{{type==1}}">
+		<view class="list-item">
+			<view class="top-info">
+				<view class="title">乘客信息</view>
+			</view>
+		</view>
+		<view
+		 class="user-list"
+		 wx:for="{{userInfo.userList}}"
+		 wx:key
+		>
+			<view class="{{opearBtn?'detail':'detail-all'}}">
+				<view class="user-list-item" bind:tap="callPhone" data-tel="{{item.tel}}">
+					<view class="icon">
+						<view class="icon-dot bg-green" />
+					</view>
+					<view class="text">
+						{{item.nickName}} / {{item.tel}} (点击拨打)
+					</view>
+				</view>
+				<view class="user-list-item">
+					<view class="icon">
+						<view class="icon-dot bg-mauve" />
+					</view>
+					<view class="text">备注：{{item.note?item.note:'暂无备注'}}
+					</view>
+				</view>
+			</view>
+			<view class=" opear" wx:if="{{opearBtn}}" bind:tap="delete" data-idx="{{index}}">
+                <view class="delete"></view>
+			</view>
+		</view>
+	</view>
+</view>
+
