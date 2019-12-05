@@ -1,0 +1,70 @@
+<!--components/trip-card/trip-card.wxml-->
+<view class="container" bindtap="goTo">
+	<view class="user-info {{parse.getColorClass(color)}}" wx:if="{{type==0}}">
+		<view class="avatar">
+			<image class="avatar-img" src="{{Info.avatar}}" />
+			<view class="detail">
+				<view class="nickname">{{Info.nickName}}</view>
+				<view class="push-time">{{Info.pushTime}}</view>
+			</view>
+		</view>
+		<view class="status-info">司机未接单</view>
+	</view>
+	<view class="{{type==0?'content':'content-radius'}}">
+		<view class="list-item" wx:if="{{type!=0}}">
+			<view class="type-1" wx:if="{{type==1}}">
+				<view class="title">行程信息</view>
+				<view class="badge">我发布的</view>
+			</view>
+			<view class="type-2" wx:if="{{type==2}}">
+				<view class="title">拼车</view>
+				<view class="nav">
+					<button class="nav-btn" hover-class="nav-btn-hover" catchtap="detail">即将出行 ></button>
+				</view>
+			</view>
+		</view>
+		<view class="list-item">
+			<view class="icon">
+				<view class="time-icon" />
+			</view>
+			<view class="text">{{Info.preTime}}</view>
+		</view>
+		<view class="list-item">
+			<view class="icon">
+				<view class="start-icon" />
+			</view>
+			<view class="text">{{Info.start}}</view>
+		</view>
+		<view class="list-item">
+			<view class="icon">
+				<view class="end-icon" />
+			</view>
+			<view class="text">{{Info.end}}</view>
+		</view>
+		<view class="list-item">
+			<view class="icon">
+				<view class="peo-icon" />
+			</view>
+			<view class="text">{{Info.peoNum}}/{{Info.peoTotalNum}}</view>
+		</view>
+	</view>
+</view>
+<wxs module="parse">
+	module.exports = {
+	getColorClass: function(color) {
+	var className = '';
+	switch(color){
+	case "grey":className="grey";break;
+	case "red":className="Red";break;
+	case "orange":className="Orange";break;
+	case "green":className="Green";break;
+	case "purple":className="Purple";break;
+	case "pink":className="Pink";break;
+	case "blue":className="Blue";break;
+	default:className="grey";break;
+	}
+	return className;
+	},
+	}
+</wxs>
+
