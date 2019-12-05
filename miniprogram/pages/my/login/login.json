@@ -1,0 +1,12 @@
+{
+    "backgroundColorTop": "#5677FC",
+    "backgroundColorBottom": "#ffffff",
+    "navigationStyle": "default",
+    "navigationBarBackgroundColor": "#5677FC",
+    "enablePullDownRefresh": false,
+    "navigationBarTitleText": "",
+    "usingComponents": {
+      "tui-icon": "../../../components/icon/icon",
+      "tui-button": "../../../components/button/button"
+    }
+  }

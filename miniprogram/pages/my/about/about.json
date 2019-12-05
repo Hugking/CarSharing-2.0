@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "default",
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "关于我们",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#fafafa",
+  "backgroundColorBottom": "#fafafa"
+}

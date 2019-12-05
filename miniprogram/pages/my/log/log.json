@@ -1,0 +1,13 @@
+{
+  "navigationStyle": "default",
+  "navigationBarTitleText": "更新日志",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#fafafa",
+  "backgroundColorBottom": "#fafafa",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tui-icon": "../../../components/icon/icon",
+    "tui-time-axis": "../../../components/time-axis/time-axis",
+    "tui-timeaxis-item": "../../../components/timeaxis-item/timeaxis-item"
+  }
+}

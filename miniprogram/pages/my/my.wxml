@@ -1,0 +1,71 @@
+<!--pages/my/my.wxml-->
+<view class='container'>
+  <view class='top-container'>
+    <image class='bg-img' src='../../static/images/my/mine_bg_3x.png'></image>
+    <view bindtap='logout' class='logout' hover-class="opcity" hover-stay-time="150" >
+      <image class='logout-img' src='../../static/images/my/icon_out_3x.png' hidden='{{!isLogin}}'></image>
+      <text class='logout-txt' hidden='{{!isLogin}}'>退出</text>
+    </view>
+    <view hidden='{{isLogin}}' class='user-wrapper'>
+      <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler" class="login-button">
+        <navigator url='../my/login/login' hover-class="opcity" hover-stay-time="150" class='user'>
+          <image class='avatar-img' src='../../static/images/my/mine_def_touxiang_3x.png'></image>
+          <text class='user-info-mobile'>请登录</text>
+        </navigator>
+      </button>
+    </view>
+    <view hidden='{{!isLogin}}' class='user'>
+      <image class='avatar-img' src='../../static/images/my/mine_def_touxiang_3x.png'></image>
+      <view class='user-info-mobile'>
+        <text>{{memberName}}</text>
+        <tui-badge type="warning" size="small" tui-tag-class="tui-mrbtm">司机</tui-badge>
+        <view  class='edit-img' hover-class="opcity" hover-stay-time="150" bindtap="edit">
+          <image src='../../static/images/my/mine_icon_bianji_3x.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='middle-container'>
+    <view bindtap='tapEvent'  data-index="1" class='middle-item' hover-class="opcity" hover-stay-time="150">
+      <image class='ticket-img' src='../../static/images/my/thorui.png'></image>
+      <text class='middle-tag'>我的行程</text>
+    </view> 
+    <view bindtap='tapEvent'  data-index="2" class='middle-item' hover-class="opcity" hover-stay-time="150">
+      <image class='car-img' src='../../static/images/my/github_3x.png'></image>
+      <text class='middle-tag'>设置中心</text>
+    </view>
+  </view>
+
+  <view class='bottom-container'>
+  <view class='ul-item'>
+    <view bindtap='tapEvent' data-index="3" class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/reward.png'></image>
+      <text class='item-name'>钱包</text>
+    </view>
+    <view bindtap='tapEvent' data-index="4" class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/mine_icon_tingche_3x.png'></image>
+      <text class='item-name'>安全</text>
+    </view>
+    <view bindtap='tapEvent' data-index="5" class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/mine_icon_chongdian_3x.png'></image>
+      <text class='item-name'>客服</text>
+    </view>
+  </view>
+  <view class='ul-item'>
+    <view bindtap='tapEvent' data-index="6" class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/mine_icon_jiayouzhan_3x.png'></image>
+      <text class='item-name'>关于</text>
+    </view>
+    <view bindtap='tapEvent' data-index="7" class='item' hover-class="opcity" hover-stay-time="150">
+      <button open-type="feedback" class="btn-feedback"> </button>
+      <image class='item-img' src='../../static/images/my/feedback.png'></image>
+      <text class='item-name'>反馈</text>
+    </view>
+    <view bindtap='tapEvent' data-index="8" class='item' hover-class="opcity" hover-stay-time="150">
+      <image class='item-img' src='../../static/images/my/log.png'></image>
+      <text class='item-name'>日志</text>
+    </view>
+  </view>
+  </view>
+</view>
