@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="page_hd">
+    <view class="page_title" bindtap="doc">
+      <image src="../../static/images/index/logo.png" class="logo"></image>
+      <view class="title">豪杰校园助手
+        <view class="tui-badge">1.0</view>
+      </view>
+    </view>
+    <view class="page_desc">小程序
+      <text class="link" bindtap="template">代码片段</text>分享，源码可去
+      <text class="link" bindtap="github">GitHub</text>下载</view>
+  </view>
+  <view class="page_bd page_bd_spacing">
+    <view class="kind-list">
+      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+        <view class="kind-list_item">
+          <view id="{{item.id}}" class="tui-flex kind-list_item-hd " bindtap="kindToggle">
+            <view class="tui-flex_item">{{item.name}}</view>
+            <image class="kind-list_img tui-img-{{index}}" src="../../static/images/index/{{item.id}}.png"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+

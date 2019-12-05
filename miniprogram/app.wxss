@@ -1,0 +1,9 @@
+/**app.wxss**/
+@import "static/style/icon.wxss";
+@import "static/style/main.wxss";
+/**app.wxss**/
+
+page {
+    background: #fafafa;
+    /* font-family:PingFangSC-regular,sans-serif; */
+  }
