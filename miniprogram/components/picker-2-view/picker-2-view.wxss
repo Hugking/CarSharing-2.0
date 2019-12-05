@@ -1,0 +1,64 @@
+/* picker start*/
+
+.mask-screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9;
+  }
+  
+  .picker-box {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background: #fff;
+  }
+  
+  .picker-header {
+    width: 100%;
+    height: 90rpx;
+    padding: 0 46rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 32rpx;
+    background: #fff;
+  }
+  
+  .list-item::after {
+    left: 0;
+  }
+  
+  .btn-cancle {
+    padding: 20rpx;
+    color: #888;
+  }
+  
+  .btn-sure {
+    padding: 20rpx;
+    color: #5677fc;
+  }
+  
+  .picker-view {
+    width: 100%;
+    height: 260px;
+  }
+  
+  .item {
+    line-height: 50px;
+    text-align: center;
+  }
+  
+  /* picker end*/
+  
+  .btn-select {
+    padding: 20rpx 40rpx;
+  }
+  

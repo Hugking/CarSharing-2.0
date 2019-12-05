@@ -1,0 +1,39 @@
+<view class="container">
+	<!--picker-view start-->
+	<view class="mask-screen" bindtap="hide" hidden="{{!showPickerStatus}}" />
+	<view class="picker-box" animation="{{animationData}}" hidden="{{!showPickerStatus}}">
+		<view class="picker-header list-item">
+			<view
+			 class="btn-cancle"
+			 hover-class="opcity"
+			 hover-stay-time="150"
+			 catchtap="hide"
+			>取消
+			</view>
+			<view
+			 class="btn-sure"
+			 hover-class="opcity"
+			 hover-stay-time="150"
+			 catchtap="picker"
+			>确定
+			</view>
+		</view>
+		<picker-view
+		 indicator-style="height: 50px;"
+		 class="picker-view"
+		 value="{{value}}"
+		 bindchange="columnPicker"
+		 bindpickstart="bindpickstart"
+		 bindpickend="bindpickend"
+		>
+			<picker-view-column>
+				<view wx:for="{{cityArr}}" class="item" wx:key="item">{{item}}</view>
+			</picker-view-column>
+			<picker-view-column>
+				<view wx:for="{{addressArr}}" class="item" wx:key="item">{{item}}</view>
+			</picker-view-column>
+		</picker-view>
+	</view>
+	<!--picker-view end-->
+</view>
+
