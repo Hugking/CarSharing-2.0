@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "字段管理",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "tui-list-cell": "../../../components/list-cell/list-cell",
+    "tui-button": "../../../components/extend/button/button",
+    "tui-dropdown-list": "../../../components/dropdown-list/dropdown-list",
+    "tui-icon": "../../../components/icon/icon",
+    "tui-modal": "../../../components/modal/modal",
+    "sel-drop-list": "../../../components/sel-drop-list/sel-drop-list"
+  }
+}

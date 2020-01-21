@@ -1,0 +1,93 @@
+<view wx:if="{{add}}">
+    <view class="list">
+        <sel-drop-list content="开始地点：" valueList="{{startList}}" bind:lower="Lower" bind:set="set" data-name="start" />
+        <sel-drop-list content="结束地点：" valueList="{{endList}}" bind:lower="Lower" bind:set="set" data-name="end" />
+        <sel-drop-list content="开始时间：" valueList="{{startTimeList}}" bind:lower="Lower" bind:set="set" data-name="startTime" />
+        <sel-drop-list content="结束时间：" valueList="{{endTimeList}}" bind:lower="Lower" bind:set="set" data-name="endTime" />
+        <sel-drop-list content="乘客数量：" valueList="{{peoNumList}}" bind:lower="Lower" bind:set="set" data-name="peoNum" />
+        <sel-drop-list content="价格费用：" valueList="{{priceList}}" bind:lower="Lower" bind:set="set" data-name="price" />
+    </view>
+    <view class="tui-seizeaseat-100"></view>
+    <view class="tui-tips">更多详情请询问管理员</view>
+    <view class="btn-box">
+        <view class="btn-item">
+            <tui-button type="blue" shadow="{{true}}" plain="{{false}}" bind:click="submit">
+                立即提交
+            </tui-button>
+        </view>
+        <view class="btn-item">
+            <tui-button type="blue" shadow="{{true}}" plain="{{true}}" bind:click="find">
+                查看已有记录
+            </tui-button>
+        </view>
+    </view>
+</view>
+<!-- header 顶部下拉选择框 -->
+<tui-top-dropdown show="{{dropShow}}" paddingbtm="110" translatey="100" bind:close="btnCloseDrop">
+    <scroll-view class="tui-scroll-box" scroll-y scroll-top="{{scrollTop}}" bindscrolltolower="Lower" data-name="{{proDropName}}">
+        <view class="tui-seizeaseat-20"></view>
+        <view class="tui-drop-item {{item.selected?'tui-bold':''}}" wx:for="{{proDropData}}" wx:key="index" catchtap="btnSelected" data-index="{{index}}">
+            <tui-icon name="check" size="16" color="#5677fc" bold="{{true}}" visible="{{item.selected}}" tui-icon-class="tui-middle"></tui-icon>
+            <text class="tui-ml tui-middle">{{item.value}}</text>
+        </view>
+        <view class="tui-seizeaseat-30"></view>
+    </scroll-view>
+    <view class="tui-drop-btnbox">
+        <view class="tui-drop-btn btn-white" hover-class="tui-white-hover" hover-stay-time="150" bindtap="reset">
+            重置
+        </view>
+        <view class="tui-drop-btn btn-primary" hover-class="btn-hover" hover-stay-time="150" bindtap="btnCloseDrop">
+            确定
+        </view>
+    </view>
+</tui-top-dropdown>
+<!-- header 顶部下拉选择框 -->
+<view wx:if="{{!add}}">
+    <view>
+        <view class="tui-header">
+            <view class="tui-header-bottom">
+                <view class="tui-bottom-item {{proDropIndex==0?'tui-btmItem-active':''}} " data-index="0" bindtap="btnDropChange" data-name="start">
+                    <view class="tui-bottom-text {{proDropIndex==0?'tui-active':''}}">起点</view>
+                    <tui-icon name="{{proDropIndex==0?'arrowup':'arrowdown'}}" size="14" color="{{proDropIndex==0?'#5677fc':'#444'}}" tui-icon-class="tui-ml"></tui-icon>
+                </view>
+                <view class="tui-bottom-item {{proDropIndex==1?'tui-btmItem-active':''}}" data-index="1" bindtap="btnDropChange" data-name="end">
+                    <view class="tui-bottom-text {{proDropIndex==1?'tui-active':''}}">终点</view>
+                    <tui-icon name="{{proDropIndex==1?'arrowup':'arrowdown'}}" size="14" color="{{proDropIndex==1?'#5677fc':'#444'}}" tui-icon-class="tui-ml"></tui-icon>
+                </view>
+                <view class="tui-bottom-item {{proDropIndex==2?'tui-btmItem-active':''}}" data-index="2" bindtap="btnDropChange" data-name="startTime">
+                    <view class="tui-bottom-text {{proDropIndex==2?'tui-active':''}}">开始时间</view>
+                    <tui-icon name="{{proDropIndex==2?'arrowup':'arrowdown'}}" size="14" color="{{proDropIndex==2?'#5677fc':'#444'}}" tui-icon-class="tui-ml"></tui-icon>
+                </view>
+            </view>
+        </view>
+        <view class="tui-seizeaseat-100"></view>
+        <scroll-view scroll-y class="tui-dropdown-scroll" bindscrolltolower="Lower" data-name="find">
+            <block wx:for="{{valueList}}" wx:key="index">
+                <tui-list-cell hover="{{!edit}}" arrow="{{!edit}}" bind:tap="updateShow" data-item="{{item}}" data-idx="{{index}}">
+                    <view class="tui-title">
+                        {{item.start+">"+item.end+' '+item.startTime+"-"+item.endTime+" " + item.peoNum+"人 " +'￥'+item.price}}
+                    </view>
+                    <view class="opear" wx:if="{{edit}}">
+                        <tui-icon name="reduce" size="20" catchtap="reduceShow" data-item="{{item}}" data-idx="{{index}}" />
+                    </view>
+                </tui-list-cell>
+            </block>
+        </scroll-view>
+    </view>
+    <tui-modal show="{{modal}}" custom="{{true}}" shape="circle" bind:cancel="updateShow">
+        <view class="tui-modal-custom">{{modalText}}</view>
+    </tui-modal>
+    <view class="tui-tips">更多详情请询问管理员</view>
+    <view class="btn-box">
+        <view class="btn-item">
+            <tui-button type="blue" shadow="{{true}}" plain="{{false}}" bind:click="edit">
+                编辑
+            </tui-button>
+        </view>
+        <view class="btn-item">
+            <tui-button type="blue" shadow="{{true}}" plain="{{true}}" bind:click="find">
+                去创建
+            </tui-button>
+        </view>
+    </view>
+</view>

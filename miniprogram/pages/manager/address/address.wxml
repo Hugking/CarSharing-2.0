@@ -1,0 +1,186 @@
+<view class="container">
+  <view>
+    <block wx:for="{{addressList}}" wx:key="idx1" wx:for-index="idx1" wx:for-item="item1">
+      <tui-collapse index="{{idx1}}" current="{{current1}}" bind:click="change1" data-item="{{item1}}" data-idx="{{idx1}}" wx:if="{{item1.value}}">
+        <tui-list-cell hover="{{!edit}}" slot="title">
+          <view class="title-box {{idx1===current1?'open':''}}">
+            <view class="title">{{item1.value}}</view>
+            <view class="opear" wx:if="{{idx1!==current1&&edit}}">
+              <tui-icon name="reduce" size="26" catch:tap="reduceShow" data-item="{{item1}}" data-idx="{{idx1}}" />
+            </view>
+          </view>
+        </tui-list-cell>
+        <view class="tui-content" slot="content">
+          <view wx:for="{{item1.children}}" wx:key="idx2" wx:for-index="idx2" wx:for-item="item2">
+            <tui-collapse index="{{idx2}}" current="{{current2}}" bind:click="change2" data-item="{{item2}}" data-idx="{{idx2}}" wx:if="{{item2.value}}">
+              <tui-list-cell hover="{{!edit}}" slot="title">
+                <view class="title-box {{idx2===current2?'open':''}}">
+                  <view class="title">{{item2.value}}</view>
+                  <view class="opear" wx:if="{{idx2!==current2&&edit}}">
+                    <tui-icon name="reduce" size="26" catch:tap="reduceShow" data-item="{{item2}}" data-idx="{{idx2}}" />
+                  </view>
+                </view>
+              </tui-list-cell>
+              <view class="tui-content" slot="content">
+                <view wx:for="{{item2.children}}" wx:key="idx3" wx:for-index="idx3" wx:for-item="item3">
+                  <tui-list-cell hover="{{!edit}}" slot="title" wx:if="{{item3.value}}">
+                    <view class="title-box-last">
+                      <view class="title">{{item3.value}}</view>
+                      <view class="opear" wx:if="{{edit}}">
+                        <tui-icon name="reduce" size="26" catch:tap="reduceShow" data-item="{{item3}}" data-idx="{{idx3}}" />
+                      </view>
+                    </view>
+                  </tui-list-cell>
+                  <view class="tui-drop-input-box">
+                    <tui-list-cell hover="{{edit}}" arrow="{{!edit}}" wx:if="{{idx3+1===addressList[idx1].children[idx2].children.length&&edit}}" bindtap="plus" data-item="{{item3}}">
+                      <view style="width:100%;display:flex;justify-content:center">
+                        <tui-icon name="plus" size="26" />
+                      </view>
+                    </tui-list-cell>
+                  </view>
+                </view>
+              </view>
+            </tui-collapse>
+            <view class="tui-drop-input-box">
+              <tui-list-cell hover="{{edit}}" arrow="{{!edit}}" wx:if="{{idx2+1===addressList[idx1].children.length&&edit&&current2===-1}}" bindtap="plus" data-item="{{item2}}">
+                <view style="width:100%;display:flex;justify-content:center">
+                  <tui-icon name="plus" size="26" />
+                </view>
+              </tui-list-cell>
+            </view>
+          </view>
+        </view>
+        <!-- <> -->
+      </tui-collapse>
+      <view class="tui-drop-input-box">
+        <tui-list-cell hover="{{edit}}" arrow="{{!edit}}" wx:if="{{!item1.value&&edit&&current1===-1}}" bindtap="plus" data-item="{{item1}}">
+          <view style="width:100%;display:flex;justify-content:center">
+            <tui-icon name="plus" size="26" />
+          </view>
+        </tui-list-cell>
+      </view>
+    </block>
+  </view>
+  <tui-modal show="{{valueShow}}" bind:cancel="valueShow" custom="{{true}}">
+    <view class="tui-modal-custom">
+      <view class="tui-modal-custom-text">{{!updateValue?'请选择':'您选择的是：'+ updateValue}}</view>
+      <view class="tui-selected-list">
+        <scroll-view scroll-y class="tui-dropdown-scroll" bindscrolltolower="Lower">
+          <block wx:for="{{valueList}}" wx:key="index">
+            <tui-list-cell tui-cell-class="tui-selected-item" bind:click="setValue" data-item="{{item}}">
+              <text class="tui-center">{{item.value}}</text>
+            </tui-list-cell>
+          </block>
+        </scroll-view>
+      </view>
+      <view class="tui-btn-box">
+        <button class="tui-btn-blue tui-fillet" hover-class="tui-blue-hover" bind:tap="submit">
+          立即提交
+        </button>
+      </view>
+    </view>
+  </tui-modal>
+  <!-- 下拉选择框 dropdownlist -->
+  <!-- <view class="tui-drop-input-box" wx:if="{{!item.value&&edit&&current1===-1}}">
+    <tui-dropdown-list show="{{valueShow}}" top="94" height="400">
+      <tui-list-cell slot="selectionbox" hover="{{edit}}" arrow="{{!edit}}" bindtap="plus" data-name="{{item.name}}">
+        <view style="width:100%;display:flex;justify-content:center">
+          <tui-icon name="plus" size="26" />
+        </view>
+      </tui-list-cell>
+      <view slot="dropdownbox" class="tui-selected-list">
+        <scroll-view scroll-y class="tui-dropdown-scroll" bindscrolltolower="Lower">
+          <block wx:for="{{valueList}}" wx:key="index">
+            <tui-list-cell tui-cell-class="tui-selected-item" bind:click="setValue" data-id="{{item.id}}" data-name="{{item.name}}" data-value="{{item.value}}">
+              <text class="tui-center">{{item.value}}</text>
+            </tui-list-cell>
+          </block>
+        </scroll-view>
+      </view>
+    </tui-dropdown-list>
+  </view> -->
+  <!-- <form bindsubmit="formSubmit" bindreset="formReset">
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">姓名</view>
+        <input placeholder-class="phcolor" class="tui-input" name="name" placeholder="请输入姓名" maxlength="50" type="text" />
+        <radio-group class="radio-group" name="sex">
+          <label class="tui-radio">
+            <radio value="1" color="#5677fc" />男
+          </label>
+          <label class="tui-radio">
+            <radio value="2" color="#5677fc" />女
+          </label>
+        </radio-group>
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">省份</view>
+        <input placeholder-class="phcolor" class="tui-input" name="age" placeholder="请输入年龄" maxlength="50" type="number" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">城市</view>
+        <input placeholder-class="phcolor" class="tui-input" name="mobile" placeholder="请输入手机号" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">地点</view>
+        <input placeholder-class="phcolor" class="tui-input" name="email" placeholder="请输入邮箱" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">身份证号码</view>
+        <input placeholder-class="phcolor" class="tui-input" name="idcard" placeholder="请输入身份证号码" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">密码</view>
+        <input placeholder-class="phcolor" class="tui-input" name="pwd" placeholder="请输入密码" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">确认密码</view>
+        <input placeholder-class="phcolor" class="tui-input" name="pwd2" placeholder="请输入确认密码" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">区间</view>
+        <input placeholder-class="phcolor" class="tui-input" name="range" placeholder="请输入3-20之间的数" maxlength="50" type="number" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}" last="{{true}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">金额</view>
+        <input placeholder-class="phcolor" class="tui-input" name="amount" placeholder="请输入金额,允许保留两位小数" maxlength="50" type="digit" />
+      </view>
+    </tui-list-cell>
+    <view class="tui-tips">更多验证请参考文档</view>
+    <view class="tui-btn-box">
+      <button class="btn-primary" hover-class="btn-hover" formType="submit" type="primary">
+        Submit
+      </button>
+      <button class="btn-primary btn-gray" hover-class="btn-gray-hover" formType="reset">
+        Reset
+      </button>
+    </view>
+  </form> -->
+  <view class="tui-tips">更多详情请询问管理员</view>
+  <view class="btn-box">
+    <view class="btn-item">
+      <tui-button type="blue" shadow="{{true}}" plain="{{false}}" bind:click="edit">编辑</tui-button>
+    </view>
+    <view class="btn-item">
+      <tui-button type="blue" shadow="{{true}}" plain="{{true}}" bind:click="refresh">
+        刷新列表
+      </tui-button>
+    </view>
+  </view>
+</view>
