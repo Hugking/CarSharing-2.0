@@ -1,0 +1,17 @@
+<view class="tui-drop-input-box">
+    <tui-dropdown-list show="{{valueShow}}" top="94" height="{{height}}">
+        <tui-button type="white" slot="selectionbox" bind:click="valueShow">
+            <text class="btn-text">{{content}}{{valueName}}</text>
+            <tui-icon name="turningdown" size="20" tui-icon-class="tui-animation {{valueShow?'tui-animation-show':''}}" />
+        </tui-button>
+        <view slot="dropdownbox" class="tui-selected-list">
+            <scroll-view scroll-y class="tui-dropdown-scroll" bindscrolltolower="Lower" style="height:{{height}}rpx;">
+                <block wx:for="{{valueList}}" wx:key="index">
+                    <tui-list-cell tui-cell-class="tui-selected-item" bind:click="setValue" data-item="{{item}}">
+                        <text class="tui-center">{{item.value}}</text>
+                    </tui-list-cell>
+                </block>
+            </scroll-view>
+        </view>
+    </tui-dropdown-list>
+</view>

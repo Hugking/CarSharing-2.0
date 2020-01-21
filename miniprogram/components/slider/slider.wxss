@@ -1,0 +1,24 @@
+.slider-box {
+    width: 100%;
+    padding: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.slider {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-text {
+    width: 5vw;
+    color: dimgrey;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    padding: 5rpx;
+}

@@ -1,0 +1,17 @@
+<view class="container">
+	<view class="title">
+		<view class="text">{{text}}</view>
+	</view>
+	<view class="list">
+		<view class="list-item" wx:for="{{4}}" wx:key="index">
+			<button
+			 class="btn"
+			 style="height: 80rpx;width: 80rpx;border-radius:50%;{{peopleNum == item+1? color ?'color: #fff;background-color: '+color:'color: #fff;background-color: #5677fc':'background-color: #fff;color: #000;'}}"
+			 data-num="{{item+1}}"
+			 bind:tap="peoplePicker"
+			>{{item + 1}}
+			</button>
+		</view>
+	</view>
+</view>
+

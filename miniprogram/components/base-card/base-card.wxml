@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="address-box-1" wx:if="{{type==1}}">
+    <view class="address-item">
+      <view class="start" data-id="start" bind:tap="addressShow">
+        <view class="text" style="color:{{textColor?textColor:'#8799a3'}}">
+          {{start?start[1]:"出发地"}}
+        </view>
+      </view>
+    </view>
+    <view class="icon">
+      <view class="go-icon" />
+    </view>
+    <view class="address-item">
+      <view class="end" data-id="end" bind:tap="addressShow">
+        <view class="text" style="color:{{textColor?textColor:'#8799a3'}}">
+          {{end?end[1]:"你想去哪？"}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="time-box-1" wx:if="{{type==1}}">
+    <view class="time" bind:tap="timeShow">
+      <view class="text" style="color:{{textColor?textColor:'#8799a3'}}">
+        {{time?time.result+" 出发":"何时出发？"}}
+      </view>
+    </view>
+  </view>
+  <view class="address-box-2" wx:if="{{type==2}}">
+    <view class="address-item-2">
+      <view class="start-icon" />
+      <view class="address-detail" data-id="start" bind:tap="addressShow">
+        <view class="text" style="color:{{textColor?textColor:'#8799a3'}}">
+          {{start?start[1]:"出发地"}}
+        </view>
+      </view>
+    </view>
+    <view class="address-item-2">
+      <view class="end-icon" />
+      <view class="address-detail" data-id="end" bind:tap="addressShow">
+        <view class="text" style="color:{{textColor?textColor:'#8799a3'}}">
+          {{end?end[1]:"你想去哪？"}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="time-box-2" wx:if="{{type==2}}">
+    <view class="time-icon" />
+    <view class="time-title" bind:tap="timeShow">
+      <view class="text" style="color:{{textColor?textColor:'#8799a3'}}">
+        {{time?time.result+" 出发":"何时出发？"}}
+      </view>
+    </view>
+  </view>
+</view>
+<picker-2-view id="picker-2-view-start" externalValue="{{startValue}}" addressData="{{startArray}}" data-id="start" bindconfirm="addressPickerStart" />
+<picker-2-view id="picker-2-view-end" externalValue="{{endValue}}" addressData="{{endArray}}" data-id="end" bindconfirm="addressPickerEnd" />
+<tui-datetime id="tui-dateTime-ctx" type="1" startYear="2020" bindconfirm="timePicker" />

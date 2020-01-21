@@ -1,0 +1,14 @@
+<view class="container">
+	<view class="user-info">
+		<image class="avatar" src="{{tripInfo.avatar}}" />
+		<view class="nickname">{{tripInfo.nickName}}</view>
+		<view class="push-time">{{tripInfo.pushTime}}</view>
+	</view>
+	<view class="context">
+		<view class="pre-time">{{tripInfo.preTime}}</view>
+		<view class="start">{{tripInfo.start}}</view>
+		<view class="end">{{tripInfo.end}}</view>
+		<view class="peo-num">{{tripInfo.peoNum}}/{{tripInfo.peoTotalNum}}</view>
+	</view>
+</view>
+
