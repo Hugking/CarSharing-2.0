@@ -1,0 +1,15 @@
+<!--miniprogram/pages/car-sharing/search-car/search-car.wxml-->
+<tui-fab bgColor="#5677fc" btnList="{{btnList}}" bind:click="onClick" />
+<trip-card tripInfo= "{{tripInfo}}" type="0"></trip-card>
+<trip-card tripInfo= "{{tripInfo}}" type="0" color="red"></trip-card>
+<trip-card tripInfo= "{{tripInfo}}" type="0" color="orange"></trip-card>
+<trip-card tripInfo= "{{tripInfo}}" type="0" color="green"></trip-card>
+<trip-card tripInfo= "{{tripInfo}}" type="0" color="purple"></trip-card>
+<trip-card tripInfo= "{{tripInfo}}" type="0" color="pink"></trip-card>
+<trip-card tripInfo= "{{tripInfo}}" type="0" color="blue"></trip-card>
+<trip-card tripInfo= "{{tripInfo}}" type="1" bind:goTo='goTo' bind:detail="detail"></trip-card>
+<trip-card tripInfo= "{{tripInfo}}" type="2" bind:goTo='goTo' bind:detail="detail"></trip-card>
+<user-card Info="{{Info0}}" type="0" bind:detail="driverInfo"></user-card>
+<user-card Info="{{Info1}}" type="1"></user-card>
+<user-card Info="{{Info1}}" type="1" edit="{{true}}" bind:delete="delete"></user-card>
+<user-card Info="{{Info}}" type="1" edit="{{true}}" bind:delete="delete"></user-card>

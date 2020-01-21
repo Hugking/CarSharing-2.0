@@ -1,0 +1,14 @@
+{
+    "navigationStyle": "default",
+    "navigationBarTitleText": "详情信息",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fafafa",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "tui-button": "../../../components/extend/button/button",
+        "trip-card": "../../../components/trip-card/trip-card",
+        "user-card": "../../../components/user-card/user-card"
+    }
+}

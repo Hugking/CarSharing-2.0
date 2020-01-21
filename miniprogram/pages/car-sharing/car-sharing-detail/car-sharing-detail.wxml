@@ -1,0 +1,58 @@
+<trip-card
+ tripInfo="{{tripInfo}}"
+ type="1"
+ bind:goTo='goTo'
+ bind:detail="detail"
+/>
+<user-card Info="{{driver}}" type="0" bind:detail="driverInfo" />
+<user-card
+ Info="{{user}}"
+ type="1"
+ edit="{{edit}}"
+ bind:delete="delete"
+/>
+<view class="btn-box">
+	<view class="btn-item">
+		<tui-button
+		 type="blue"
+		 shadow="{{true}}"
+		 plain="{{false}}"
+		 bind:click="push"
+		>
+			分享召集小伙伴
+		</tui-button>
+	</view>
+	<view class="btn-item">
+		<tui-button
+		 type="blue"
+		 shadow="{{true}}"
+		 plain="{{true}}"
+		 bind:click="back"
+		>
+			取消行程
+		</tui-button>
+	</view>
+</view>
+<!-- <view class="btn-box">
+	<view class="btn-item">
+		<tui-button
+		 type="blue"
+		 shadow="{{true}}"
+		 plain="{{false}}"
+		 bind:click="push"
+		>
+			分享召集小伙伴
+		</tui-button>
+	</view>
+	<view class="btn-item">
+		<tui-button
+		 type="blue"
+		 shadow="{{true}}"
+		 plain="{{true}}"
+		 bind:click="join"
+		>
+			我要拼车
+		</tui-button>
+	</view>
+</view> -->
+

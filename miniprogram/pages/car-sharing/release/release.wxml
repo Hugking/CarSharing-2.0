@@ -1,0 +1,75 @@
+<view class="base-card">
+	<base-card
+	 type="1"
+	 bind:time="time"
+	 bind:start="start"
+	 bind:end="end"
+	 textColor="{{textColor}}"
+	 startArray="{{startArray}}"
+	 endArray="{{endArray}}"
+	 startValue="{{startValue}}"
+	 endValue="{{endValue}}"
+	/>
+</view>
+<view class="container">
+	<view class="people-box">
+		<view style="color:{{textColor?textColor:'#8799a3'}}">
+			<peoNum-sel text="乘客人数：" bind:sel="peoNum" color="{{activeTextColor?activeTextColor:'#5677fc'}}" />
+		</view>
+	</view>
+	<view class="people-box">
+		<view style="color:{{textColor?textColor:'#8799a3'}}">
+			<peoNum-sel text="乘客总数：" bind:sel="peoTotalNum" color="{{activeTextColor?activeTextColor:'#5677fc'}}" />
+		</view>
+	</view>
+	<view class="time-zone-box">
+		<view class="value-box">
+			<view class="value">
+				<view style="color:{{activeTextColor?activeTextColor:'#5677fc'}}">提前{{-leftValue}}分钟，</view>
+			</view>
+			<view class="value">
+				<view style="color:{{activeTextColor?activeTextColor:'#5677fc'}}">错后{{rightValue}}分钟</view>
+			</view>
+		</view>
+		<tui-slider bind:right="rightChange" bind:left="leftChange" color="{{activeTextColor?activeTextColor:'#5677fc'}}" />
+	</view>
+    <view class="tui-cells">
+      <textarea class="tui-textarea" name="desc" placeholder="点击可输入备注信息" maxlength="300" 
+	   placeholder-style="color:{{textColor?textColor:'#8799a3'}}"
+	   bindinput="input" />
+      <view class="tui-textarea-counter">{{textNum?textNum:0}}/300</view>
+    </view>
+	<!-- <view class="input-box">
+		<view class="input-title" style="color:{{textColor?textColor:'#8799a3'}}">备注：</view>
+		<view class="input">
+			<input
+			 placeholder="点击可输入备注信息"
+			 maxlength="-1"
+			 bindinput="input"
+			 placeholder-style="color:{{textColor?textColor:'#8799a3'}}"
+			/>
+		</view>
+	</view> -->
+	<view class="btn-box">
+		<view class="btn-item">
+			<tui-button
+			 type="blue"
+			 shadow="{{true}}"
+			 plain="{{false}}"
+			 bind:click="push"
+			>
+				发布拼车
+			</tui-button>
+		</view>
+		<view class="btn-item">
+			<tui-button
+			 type="blue"
+			 shadow="{{true}}"
+			 plain="{{true}}"
+			 bind:click="back"
+			>返回搜索
+			</tui-button>
+		</view>
+	</view>
+</view>
+

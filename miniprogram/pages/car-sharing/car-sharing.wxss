@@ -1,0 +1,41 @@
+/* @import '../../static/style/thorui.wxss'; */
+
+.base-card {
+    margin-top: 10rpx;
+}
+
+.container {
+    padding: 10rpx 0;
+    margin: 0 10rpx;
+    background: #fff;
+    border-radius: 10rpx;
+}
+
+.people-box {
+    padding: 10rpx 0rpx;
+    margin-bottom: 10rpx;
+    background: #fff;
+}
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10rpx;
+}
+
+.btn-item {
+    width: 45%;
+    margin: 20rpx;
+}
+
+.text {
+    padding: 20rpx;
+}
+
+.content {
+    color: gray;
+    font-size: 24rpx;
+    text-align: start;
+}

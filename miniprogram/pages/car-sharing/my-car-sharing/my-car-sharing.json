@@ -1,0 +1,14 @@
+{
+  "navigationStyle": "default",
+  "navigationBarTitleText": "我的行程",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundColorTop": "#fff",
+  "backgroundColorBottom": "#fafafa",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tui-button": "../../../components/extend/button/button",
+    "trip-card": "../../../components/trip-card/trip-card",
+    "tui-tabs": "../../../components/tui-tabs/tui-tabs"
+  }
+}

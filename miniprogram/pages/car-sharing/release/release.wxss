@@ -1,0 +1,123 @@
+.base-card {
+    margin-top: 10rpx;
+}
+
+.container {
+    padding: 10rpx 0;
+    margin: 0 10rpx;
+    background: #fff;
+    border-radius: 10rpx;
+}
+
+
+/* public */
+
+.people-box {
+    padding: 10rpx 0rpx;
+    margin-bottom: 10rpx;
+}
+
+.time-zone-box {
+    justify-content: center;
+}
+
+.value-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10rpx;
+}
+
+.slider-box {
+    width: 100%;
+    padding: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.slider {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-text {
+    width: 5vw;
+    color: dimgrey;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    padding: 5rpx;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.input-title {
+    width: 13%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.input {
+    width: 87%;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10rpx;
+}
+
+.btn-item {
+    width: 45%;
+    margin: 20rpx;
+}
+
+.tui-title {
+    padding: 55rpx 0 30rpx 0;
+    font-size: 32rpx;
+    color: #333;
+    font-weight: bold
+}
+
+.tui-top40 {
+    margin-top: 40rpx;
+}
+
+.tui-textarea {
+    height: 210rpx;
+    width: 100%;
+    color: #666;
+    font-size: 28rpx;
+}
+
+.tui-textarea-counter {
+    font-size: 24rpx;
+    color: #999;
+    text-align: right;
+    height: 40rpx;
+    line-height: 40rpx;
+    padding-top: 4rpx;
+}
+
+.tui-cells {
+    /* border: 1rpx solid #e6e6e6; */
+    border-radius: 4rpx;
+    height: 280rpx;
+    box-sizing: border-box;
+    padding: 20rpx 20rpx 0 20rpx;
+    position: relative;
+}
