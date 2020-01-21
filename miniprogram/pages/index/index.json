@@ -1,5 +1,7 @@
 {
-    "navigationBarBackgroundColor": "#5677FC",
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "豪杰校园助手"
-  }
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "豪杰校园助手",
+  "backgroundColorTop": "#fff",
+  "enablePullDownRefresh": false
+}
