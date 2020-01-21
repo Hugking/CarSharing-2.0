@@ -2,11 +2,12 @@
     "navigationStyle": "default",
     "navigationBarTitleText": "个人中心",
     "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor":"#5677FC",
+    "navigationBarBackgroundColor": "#5677FC",
     "backgroundColorTop": "#5677FC",
     "backgroundColorBottom": "#fafafa",
     "enablePullDownRefresh": false,
     "usingComponents": {
-        "tui-badge": "../../components/badge/badge"
-      }
+        "tui-badge": "../../components/badge/badge",
+        "tui-modal": "../../components/modal/modal"
+    }
 }

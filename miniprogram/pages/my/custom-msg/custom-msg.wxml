@@ -1,0 +1,1 @@
+<button open-type="contact" bindcontact="handleContact">客服消息</button>
