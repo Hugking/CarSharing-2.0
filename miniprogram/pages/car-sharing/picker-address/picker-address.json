@@ -1,0 +1,12 @@
+{
+    "navigationStyle": "default",
+    "navigationBarTitleText": "选择拼车地点",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fafafa",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "picker-2-view": "../../../../components/picker-2-view/picker-2-view"
+    }
+}

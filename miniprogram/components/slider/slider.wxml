@@ -1,0 +1,29 @@
+<view class="slider-box">
+	<view class="slider-text">{{leftValue}}</view>
+	<view class="slider">
+		<slider
+		 max="0"
+		 min="-60"
+		 step="20"
+		 value="{{leftValue}}"
+		 active-color="{{bgColor?bgColor:'#FFFFFF'}}"
+		 background-color="{{color?color:'#5677fc'}}"
+		 block-size="20"
+		 style="margin-right:0rpx;width:50%;"
+		 bindchange="leftChange"
+		/>
+		<slider
+		 max="60"
+		 min="0"
+		 step="20"
+		 value="{{rightValue}}"
+		 active-color="{{color?color:'#5677fc'}}"
+		 background-color="{{bgColor?bgColor:'#FFFFFF'}}"
+		 block-size="20"
+		 style="margin-left:0rpx;width:50%;"
+		 bindchange="rightChange"
+		/>
+	</view>
+	<view class="slider-text">{{rightValue}}</view>
+</view>
+

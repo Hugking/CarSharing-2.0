@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "picker-2-view": "../components/picker-2-view/picker-2-view",
+        "tui-datetime": "../components/dateTime/dateTime"
+    }
+}

@@ -1,0 +1,78 @@
+<!-- 下拉选择框 dropdownlist -->
+<sel-drop-list content="字段名：" height='600' valueList="{{fieldList}}" bind:lower="fieldLower" bind:set="fieldList" />
+<!-- 下拉选择框 -->
+<!-- 单项操作框 -->
+<scroll-view scroll-y class="tui-dropdown-scroll" bindscrolltolower="valueLower">
+  <block wx:for="{{valueList}}" wx:key="index">
+    <tui-list-cell hover="{{!edit}}" arrow="{{!edit}}" bind:tap="updateShow" data-item="{{item}}" data-idx="{{index}}" wx:if="{{!edit}}">
+      <view class="tui-title">{{item.value}}</view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{!edit}}" arrow="{{!edit}}" wx:else>
+      <view class="tui-title">{{item.value}}</view>
+      <view class="opear">
+        <tui-icon name="reduce" size="26" bindtap="reduceShow" data-item="{{item}}" data-idx="{{index}}" />
+      </view>
+    </tui-list-cell>
+  </block>
+  <tui-list-cell hover="{{edit}}" arrow="{{!edit}}" wx:if="{{edit}}" bindtap="plus">
+    <view style="width:100%;display:flex;justify-content:center">
+      <tui-icon name="plus" size="26" />
+    </view>
+  </tui-list-cell>
+</scroll-view>
+<tui-modal show="{{updateShow}}" bind:cancel="updateShow" custom="{{true}}" fadein="{{true}}">
+  <view class="tui-modal-custom">
+    <form bindsubmit="updateSubmit">
+      <view class="">
+        <view class="tui-prompt-title">{{fieldName}}</view>
+        <input value="{{updateItem.value}}" maxlength="50" class="tui-input" name="value" placeholder="请输入{{fieldName}}值" />
+      </view>
+      <view class="">
+        <view class="tui-prompt-title">优先级（0最高）</view>
+        <input value="{{updateItem.priority}}" maxlength="50" class="tui-input" name="priority" placeholder="请输入优先级" />
+      </view>
+      <view class="tui-btn-box">
+        <button class="tui-btn-blue tui-fillet" hover-class="tui-blue-hover" formType="submit">
+          立即提交
+        </button>
+      </view>
+    </form>
+  </view>
+</tui-modal>
+<!-- 单项操作框 -->
+<!-- 管理字段名 -->
+<tui-modal show="{{fieldShow}}" bind:cancel="fieldShow" custom="{{true}}" fadein="{{true}}">
+  <view class="tui-modal-custom">
+    <form bindsubmit="fieldSunmit">
+      <view class="">
+        <view class="tui-prompt-title">字段名称(英文)</view>
+        <input value="{{fieldItem.name}}" maxlength="50" class="tui-input" name="name" placeholder="请输入字段名称" />
+      </view>
+      <view class="">
+        <view class="tui-prompt-title">字段值</view>
+        <input value="{{fieldItem.value}}" maxlength="50" class="tui-input" name="value" placeholder="请输入字段值" />
+      </view>
+      <view class="">
+        <view class="tui-prompt-title">字段优先级（0最高）</view>
+        <input value="{{fieldItem.priority}}" maxlength="50" class="tui-input" name="priority" placeholder="请输入字段优先级" />
+      </view>
+      <view class="tui-btn-box">
+        <button class="tui-btn-blue tui-fillet" hover-class="tui-blue-hover" formType="submit">
+          立即提交
+        </button>
+      </view>
+    </form>
+  </view>
+</tui-modal>
+<!-- 管理字段名 -->
+<view class="tui-tips">更多详情请询问管理员</view>
+<view class="btn-box">
+  <view class="btn-item">
+    <tui-button type="blue" shadow="{{true}}" plain="{{false}}" bind:click="edit">编辑</tui-button>
+  </view>
+  <view class="btn-item">
+    <tui-button type="blue" shadow="{{true}}" plain="{{true}}" bind:click="refresh">
+      刷新列表
+    </tui-button>
+  </view>
+</view>

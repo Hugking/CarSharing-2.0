@@ -1,0 +1,43 @@
+/* 选择框 */
+
+.tui-drop-input-box {
+    padding: 5rpx;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.tui-animation {
+    transform: rotate(0deg);
+    transition: all 0.2s;
+}
+
+.tui-animation-show {
+    transform: rotate(180deg);
+}
+
+.tui-selected-list {
+    background: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.tui-dropdown-scroll {
+    border: 1rpx solid #e6e6e6;
+}
+
+.tui-selected-item {
+    display: flex;
+    align-items: center;
+    padding: 26rpx 30rpx !important;
+}
+
+
+/* 选择框 */
+
+.btn-text {
+    justify-items: justify-start;
+    width: 100%;
+    display: flex;
+    font-weight: normal;
+}

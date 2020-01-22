@@ -1,0 +1,15 @@
+{
+    "navigationStyle": "default",
+    "navigationBarTitleText": "提现",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fafafa",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "tui-icon": "../../../components/icon/icon",
+        "tui-view": "../../../components/list-view/list-view",
+        "tui-cell": "../../../components/list-cell/list-cell",
+        "tui-button": "../../../components/extend/button/button"
+    }
+}

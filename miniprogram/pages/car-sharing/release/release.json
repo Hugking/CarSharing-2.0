@@ -1,0 +1,15 @@
+{
+    "navigationStyle": "default",
+    "navigationBarTitleText": "发布",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fafafa",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "tui-button": "../../../components/extend/button/button",
+        "peoNum-sel": "../../../components/peoNum-sel/peoNum-sel",
+        "tui-slider": "../../../components/slider/slider",
+        "base-card": "../../../components/base-card/base-card"
+    }
+}

@@ -1,0 +1,42 @@
+<view class="contaion">
+<view class="list" wx:for="{{typeList}}" wx:key="index">
+<tui-view title="{{item.title}}识别"  wx:if="{{num==item.id}}" >
+  <view class="img" bindtap="choose" data-type="{{item.value}}">
+    <image src="{{file}}" style="width:100%;height:100%;" mode="aspectFit" wx:if="{{file}}" />
+    <view wx:else class="img-block">
+      <tui-icon name="add" size="70" color="#999"></tui-icon>
+    </view>
+  </view>
+  <tui-cell arrow="{{true}}" tui-cell-class="tui-list" wx:for="{{info}}" wx:key="index">
+    <view class="tui-cell-name">{{item.item}}</view>
+    <view class="tui-right" >
+      {{item.itemstring}}
+    </view>
+  </tui-cell>
+</tui-view>
+</view>
+<view class="btn-box">
+  <view class="btn-item">
+    <tui-button type="blue" shadow="{{true}}" plain="{{true}}" bind:click="before">
+      上一步
+    </tui-button>
+  </view>
+  <view class="btn-item" wx:if="{{num < typeList.length-1}}">
+    <tui-button type="blue" shadow="{{true}}" plain="{{false}}" bind:click="next" >
+      下一步
+    </tui-button>
+  </view>
+  <view class="btn-item" wx:else>
+    <tui-button type="blue" shadow="{{true}}" plain="{{false}}" bind:click="confirm" >
+      完成
+    </tui-button>
+  </view>
+</view>
+<view class="">
+  <view class="cu-steps">
+    <view class="cu-item {{index>num?'':'text-blue'}}" wx:for="{{typeList}}" wx:key="index">
+      <text class="num {{typeList[index].content==null?'err':''}}" data-index="{{index + 1}}"></text> {{item.title}}
+    </view>
+  </view>
+</view>
+</view>

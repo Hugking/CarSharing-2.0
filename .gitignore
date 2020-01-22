@@ -1,1 +1,9 @@
 node_modules
+node_modules/minapp-sdk-typings/package.json
+node_modules/minapp-sdk-typings/types/baas.d.ts
+node_modules/miniprogram-api-typings/CHANGELOG.md
+node_modules/miniprogram-api-typings/package.json
+node_modules/miniprogram-api-typings/VERSIONS.md
+node_modules/miniprogram-api-typings/types/wx/lib.wx.api.d.ts
+node_modules/miniprogram-api-typings/types/wx/lib.wx.component.d.ts
+package-lock.json

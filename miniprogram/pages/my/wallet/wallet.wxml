@@ -1,0 +1,47 @@
+<view class="container">
+	<view class="head-box">
+		<view class="bg" />
+		<view class="money-box">
+			<view class="today-money">
+				<view class="title">今日收款{{today.count?today.count:'0'}}笔</view>
+				<view class="tui-pro-price">
+					<view>￥
+						<text class="tui-price">{{today.money?Num.format(today.money):'0.00'}}</text>
+					</view>
+				</view>
+				<view class="btn-box">
+					<button class="nav-btn" hover-class="nav-btn-hover" bindtap="history">
+						查看明细
+					</button>
+				</view>
+			</view>
+			<view class="balance">
+				<view class="title">余额</view>
+				<view class="tui-pro-price">
+					<view>￥
+						<text class="tui-price">{{totalMoney?Num.format(totalMoney):'0.00'}}</text>
+					</view>
+				</view>
+				<view class="btn-box">
+					<button class="nav-btn" hover-class="nav-btn-hover" bindtap="withdraw">
+						提现
+					</button>
+				</view>
+			</view>
+		</view>
+    </view>
+    <view class="notice">
+        <view class="title">注意事项</view>
+        <view class="content">1.注意内容</view>
+    </view>
+</view>
+
+<wxs module="Num">
+ var format = function (value) {
+ return value.toFixed(2);
+}
+module.exports = {
+  format:format
+}
+</wxs>
+

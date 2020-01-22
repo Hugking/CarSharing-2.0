@@ -1,0 +1,47 @@
+<view class="container">
+	<view class="bar-box">
+		<tui-view>
+			<tui-cell bind:click="select" arrow="{{true}}" tui-cell-class="tui-list">
+				<tui-icon name="card" size="24" color="#0081ff" />
+				<view class="content">
+					<view class="title">银行卡/微信账户</view>
+					<view class="detail">尾号</view>
+				</view>
+			</tui-cell>
+		</tui-view>
+	</view>
+	<view class="input-box">
+		<view class="head">提现金额</view>
+		<view class="center">
+			<view class="icon">￥</view>
+			<view class="input">
+				<input type="digit" value="{{applyMoney}}" placeholder="0.00" bindinput="input" style="height:50px"/>
+			</view>
+		</view>
+		<view class="foot">可用余额 {{balanceMoney?Num.format(balanceMoney):'0.00'}} 元</view>
+	</view>
+	<tui-button
+	 shadow="{{true}}"
+	 disabled="{{applyMoney&&applyMoney!=0&&balanceMoney&&balanceMoney!=0? balanceMoney>=applyMoney?false:true:true}}"
+	 width="90%"
+	 type="blue"
+	 style="display:flex;algin-items:center"
+	 bind:click="withdraw"
+	>{{applyMoney&&applyMoney!=0&&
+		balanceMoney&&balanceMoney!=0? balanceMoney>=applyMoney?'确认提现':'超过可提现余额':'提现'}} </tui-button> 
+	<view class="notice-box">
+			<view class="notice">
+				提现说明
+			</view>
+	</view>
+</view>
+
+<wxs module="Num">
+ var format = function (value) {
+ return value.toFixed(2);
+}
+module.exports = {
+  format:format
+}
+</wxs>
+

@@ -1,0 +1,13 @@
+{
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff",
+    "navigationStyle": "default",
+    "navigationBarBackgroundColor": "#ffffff",
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "我的行程",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "tui-tabs": "../../../components/tui-tabs/tui-tabs",
+        "opear-card":"../../../components/opear-card/opear-card"
+    }
+}

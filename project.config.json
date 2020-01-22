@@ -2,17 +2,28 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enhance": true
 	},
-	"appid": "wx37c9d625eddac654",
-	"projectname": "%E8%B1%AA%E6%9D%B0%E6%A0%A1%E5%9B%AD%E5%8A%A9%E6%89%8B",
-	"libVersion": "2.2.5",
+	"appid": "wx94fec6cd5ed674a3",
+	"projectname": "%E8%B1%AA%E6%9D%B0%E6%A0%A1%E5%9B%AD%E5%8A%A9%E6%89%8Bback",
+	"libVersion": "2.9.3",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"compileType": "miniprogram",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -24,7 +35,14 @@
 		},
 		"plugin": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/manager/price/price",
+					"pathName": "pages/manager/price/price",
+					"scene": null
+				}
+			]
 		},
 		"game": {
 			"list": []
@@ -75,6 +93,97 @@
 					"id": -1,
 					"name": "pages/my/login/login",
 					"pathName": "pages/my/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/car-sharing/release/release",
+					"pathName": "pages/car-sharing/release/release",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/car-sharing/my-car-sharing/my-car-sharing",
+					"pathName": "pages/car-sharing/my-car-sharing/my-car-sharing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/car-sharing/car-sharing-detail/car-sharing-detail",
+					"pathName": "pages/car-sharing/car-sharing-detail/car-sharing-detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my-info/my-info",
+					"pathName": "pages/my/my-info/my-info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my-info/auth/auth",
+					"pathName": "pages/my/my-info/auth/auth",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/wallet/history/history",
+					"pathName": "pages/my/wallet/history/history",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/custom-msg/custom-msg",
+					"pathName": "pages/my/custom-msg/custom-msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/wallet/withdraw/withdraw",
+					"pathName": "pages/my/wallet/withdraw/withdraw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/wallet/wallet",
+					"pathName": "pages/my/wallet/wallet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/manager/address/address",
+					"pathName": "pages/manager/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/manager/field/field",
+					"pathName": "pages/manager/field/field",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/manager/price/price",
+					"pathName": "pages/manager/price/price",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/manager/manager",
+					"pathName": "pages/manager/manager",
 					"scene": null
 				}
 			]

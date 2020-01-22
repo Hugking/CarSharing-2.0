@@ -2,10 +2,10 @@
 <view class="container" bindtap="goTo">
 	<view class="user-info {{parse.getColorClass(color)}}" wx:if="{{type==0}}">
 		<view class="avatar">
-			<image class="avatar-img" src="{{Info.avatar}}" />
+			<image class="avatar-img" src="{{Info.avata?Info.avatar:'avatar.png'}}" />
 			<view class="detail">
-				<view class="nickname">{{Info.nickName}}</view>
-				<view class="push-time">{{Info.pushTime}}</view>
+				<view class="nickname">{{Info.nickName?Info.nickName:'昵称'}}</view>
+				<view class="push-time">{{Info.pushTime?Info.pushTime:'发布时间'}}</view>
 			</view>
 		</view>
 		<view class="status-info">司机未接单</view>
@@ -41,11 +41,11 @@
 			</view>
 			<view class="text">{{Info.end}}</view>
 		</view>
-		<view class="list-item">
+		<view class="list-item" wx:if="{{type!=2}}">
 			<view class="icon">
 				<view class="peo-icon" />
 			</view>
-			<view class="text">{{Info.peoNum}}/{{Info.peoTotalNum}}</view>
+			<view class="text">{{Info.peoNum}}/{{Info.peoTotalNum}} 人</view>
 		</view>
 	</view>
 </view>

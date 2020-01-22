@@ -1,0 +1,29 @@
+/* @import '../../static/style/icon.wxss';
+@import '../../static/style/main.wxss'; */
+
+.container{
+    display: flex;
+    margin: 10rpx;
+    border-radius: 10rpx;
+    background-color: white;
+}
+
+.content{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding: 10rpx;
+}
+
+.opera{
+    width: 30%;
+    padding: 10rpx;
+}
+.status{
+    padding: 10rpx;
+}
+.avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+  }

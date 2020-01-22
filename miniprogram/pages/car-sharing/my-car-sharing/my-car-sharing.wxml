@@ -1,0 +1,16 @@
+<view class="tabs">
+<tui-tabs
+ tabs="{{tabs}}"
+ isFixed="{{true}}"
+ currentTab="{{currentTab>tabs.length?0:currentTab}}"
+ itemWidth="50%"
+ bind:change="change"
+/>
+</view>
+<trip-card
+ tripInfo="{{tripInfo}}"
+ type="2"
+ bind:goTo='goTo'
+ bind:detail="goTo"
+/>
+

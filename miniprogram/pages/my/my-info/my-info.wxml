@@ -1,0 +1,65 @@
+<tui-view title="基本信息">
+	<tui-cell bind:click="showNameModel" arrow="{{true}}" tui-cell-class="tui-list">
+		<tui-icon name="people" size="23" color="#5677fc" />
+		<view class="tui-cell-name">姓名</view>
+		<view class="tui-right">{{name}}</view>
+	</tui-cell>
+	<tui-cell bind:click="tel" arrow="{{true}}" tui-cell-class="tui-list">
+		<tui-icon name="addressbook" size="24" color="#ff7900" />
+		<view class="tui-cell-name">绑定手机号</view>
+		<view class="tui-right">{{tel?tel:'暂未绑定手机号'}}</view>
+	</tui-cell>
+</tui-view>
+<tui-view title="司机入驻">
+	<tui-cell bind:click="auth" arrow="{{true}}" tui-cell-class="tui-list">
+		<tui-icon name="card" size="24" color="#19be6b" />
+		<view class="tui-cell-name">身份认证</view>
+		<tui-tag
+		 size="small"
+		 type="light-green"
+		 shape="circle"
+		 class="tui-right"
+		>司机入驻
+		</tui-tag>
+	</tui-cell>
+	<!-- <tui-cell bind:click="wallet" arrow="{{true}}" tui-cell-class="tui-list">
+		<tui-icon name="wealth-fill" size="24" color="#ed3f14" />
+		<view class="tui-cell-name">我的钱包</view>
+		<tui-tag
+		 size="small"
+		 type="light-orange"
+		 shape="circle"
+		 class="tui-right"
+		>司机
+		</tui-tag>
+	</tui-cell> -->
+</tui-view>
+<tui-view title="授权管理">
+	<tui-cell bind:click="openSetting" arrow="{{true}}" tui-cell-class="tui-list">
+    <tui-icon name="pwd" size="24" color="#19be6b" />
+    <view class="tui-cell-name">授权管理</view>
+	</tui-cell>
+	<tui-cell bind:click="more" arrow="{{true}}" tui-cell-class="tui-list">
+		<tui-icon name="more-fill" size="24" color="#666666" />
+		<view class="tui-cell-name">更多</view>
+	</tui-cell>
+</tui-view>
+
+<tui-modal
+ show="{{showNameModel}}"
+ bind:cancel="hideNameModel"
+ custom="{{true}}"
+ fadein="{{true}}"
+>
+	<view class="tui-modal-custom">
+		<view class="tui-prompt-title">姓名</view>
+		<input
+		 placeholder="请输入姓名，方便联系到您"
+		 value="{{name}}"
+		 class="tui-input"
+		 bindinput="input"
+		/>
+		<tui-button shape="circle" bind:click="submit" size="small">立即提交</tui-button>
+	</view>
+</tui-modal>
+

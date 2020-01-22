@@ -1,0 +1,15 @@
+{
+    "navigationStyle": "default",
+    "navigationBarTitleText": "拼车出行",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fafafa",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "tui-button": "../../../components/extend/button/button",
+        "base-card": "../../../components/base-card/base-card",
+        "tui-nomore": "../../../components/nomore/nomore",
+        "peoNum-sel": "../../../components/peoNum-sel/peoNum-sel"
+    }
+}

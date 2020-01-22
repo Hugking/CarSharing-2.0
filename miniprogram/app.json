@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/manager/manager",
+    "pages/manager/address/address",
+    "pages/manager/price/price",
+    "pages/manager/field/field"
   ],
   "subpackages": [
     {
@@ -10,7 +14,13 @@
         "login/login",
         "about/about",
         "log/log",
-        "order/order"
+        "order/order",
+        "my-info/my-info",
+        "my-info/auth/auth",
+        "wallet/wallet",
+        "wallet/history/history",
+        "custom-msg/custom-msg",
+        "wallet/withdraw/withdraw"
       ]
     },
     {
@@ -19,7 +29,10 @@
         "car-sharing",
         "picker-time/picker-time",
         "picker-address/picker-address",
-        "search-car/search-car"
+        "search-car/search-car",
+        "release/release",
+        "my-car-sharing/my-car-sharing",
+        "car-sharing-detail/car-sharing-detail"
       ]
     }
   ],
@@ -34,7 +47,7 @@
   },
   "plugins": {
     "sdkPlugin": {
-      "version": "3.2.0",
+      "version": "3.6.0",
       "provider": "wxc6b86e382a1e3294"
     },
     "wxparserPlugin": {

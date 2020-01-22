@@ -1,0 +1,26 @@
+<view class="container">
+	<view class="tui-mtop">
+		<tui-tabs
+		 tabs="{{tabs}}"
+		 isFixed="{{true}}"
+		 currentTab="{{currentTab>tabs.length?0:currentTab}}"
+		 bind:change="change"
+		/>
+	</view>
+	<view wx:for="{{orderlist}}" wx:key="index">
+		<opear-card id="{{item.id}}" type="{{item.type}}" start="{{item.startname}}" 
+		end="{{item.endname}}" time="{{item.time}}" price="{{item.cost}}" 
+		payStatus="{{item.pay_status}}" cancel="{{item.cancel}}"
+		commetion="{{item.completion}}" isGet="{{item.comfir_isget}}"/>
+	</view>
+	<button
+	 class="btn"
+	 type="primary"
+	 loading="{{loading}}"
+	 disabled="{{disabled}}"
+	 bindtap="createTable"
+	>
+		创建新表
+	</button>
+</view>
+

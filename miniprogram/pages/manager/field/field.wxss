@@ -1,0 +1,218 @@
+.tui-line-cell {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.tui-title {
+    line-height: 30rpx;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.tui-input {
+    font-size: 32rpx;
+    color: #333;
+    padding-left: 20rpx;
+    flex: 1;
+}
+
+.opear-icon {
+    border-radius: 50%;
+    border: 1rpx solid #666;
+}
+
+.tui-tips {
+    padding: 30rpx;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10rpx;
+}
+
+.btn-item {
+    width: 45%;
+    margin: 20rpx;
+}
+
+
+/* 隐藏scroll-view滚动条*/
+
+
+/* ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+} */
+
+
+/*header 下拉选择*/
+
+.tui-scroll-box {
+    width: 100%;
+    height: 480rpx;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 99;
+    color: #fff;
+    font-size: 30rpx;
+    word-break: break-all;
+}
+
+.tui-drop-item {
+    color: #333;
+    height: 80rpx;
+    font-size: 28rpx;
+    padding: 20rpx 40rpx 20rpx 40rpx;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+}
+
+.btn-text {
+    justify-items: justify-start;
+    width: 100%;
+    display: flex;
+    font-weight: normal;
+}
+
+.tui-drop-btnbox {
+    width: 100%;
+    height: 100rpx;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.tui-drop-btn {
+    width: 50% !important;
+    border-radius: 0 !important;
+    font-size: 32rpx !important;
+    text-align: center;
+    height: 100rpx;
+    line-height: 100rpx;
+    border: 0;
+}
+
+.tui-btn-white {
+    border-radius: 0;
+}
+
+
+/*header 下拉选择*/
+
+.top-dropdown {
+    margin-top: 360rpx;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}
+
+.tui-drop-input-box {
+    padding: 5rpx;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.tui-animation {
+    transform: rotate(0deg);
+    transition: all 0.2s;
+}
+
+.tui-animation-show {
+    transform: rotate(180deg);
+}
+
+.tui-selected-list {
+    background: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.tui-dropdown-scroll {
+    height: 60vh;
+    border: 1rpx solid #e6e6e6;
+}
+
+.tui-selected-item {
+    display: flex;
+    align-items: center;
+    padding: 26rpx 30rpx !important;
+}
+
+.tui-center {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.opear button {
+    min-height: 0rpx;
+    min-width: 0rpx;
+    /* border-radius: 50%;
+    border: 1rpx solid #666; */
+    padding: 0rpx;
+    margin: 0rpx;
+    width: 60rpx;
+}
+
+.opear {
+    display: flex;
+    justify-content: flex-end;
+    width: 15%;
+}
+
+.btn-mask {
+    background: #fff;
+}
+
+.btn-mask-hover {
+    background: #8799a3;
+}
+
+.tui-modal-custom {
+    text-align: center;
+}
+
+.tui-prompt-title {
+    padding-bottom: 20rpx;
+    font-size: 34rpx;
+}
+
+.tui-input {
+    margin: 30rpx 40rpx;
+    border-bottom: 1rpx solid #e6e6e6;
+    padding-bottom: 20rpx;
+    font-size: 32rpx;
+    overflow: initial;
+    line-height: 64rpx;
+    height: 64rpx;
+    min-height: 64rpx;
+    flex: 1;
+}
+
+.tui-blue-hover {
+    background: #4a67d6 !important;
+    color: #e5e5e5 !important;
+}
+
+.tui-btn-blue {
+    background: #5677fc !important;
+    color: #fff;
+    box-shadow: 0 10rpx 14rpx 0 rgba(86, 119, 252, 0.2);
+}
+
+.tui-fillet {
+    border-radius: 50rpx;
+}

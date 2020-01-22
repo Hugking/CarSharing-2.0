@@ -1,0 +1,79 @@
+/* miniprogram/pages/my/wallet/withdraw/withdraw.wxss */
+
+.container {
+    background: #fafafa;
+}
+
+.bar-box {
+    width: 100%;
+    margin: 40rpx 0rpx;
+    background-color: #fff;
+}
+
+.content {
+    padding: 10rpx 20rpx;
+    width: 80%;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 28rpx;
+    font-weight: bold;
+    padding: 5rpx;
+}
+
+.detail {
+    font-size: 24rpx;
+    color: #666;
+    padding: 5rpx;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10rpx;
+    background: #fff;
+    margin: 20rpx 0rpx;
+}
+
+.head,
+.foot {
+    align-items: flex-start;
+    color: #666;
+    font-size: 24rpx;
+    padding: 10rpx;
+}
+
+.center {
+    padding: 20rpx 0rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.input {
+    font-size: 45rpx;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.in .notice-box {
+    width: 100%;
+    margin: 20rpx 0rpx;
+}
+
+.icon {
+    font-size: 30rpx;
+    padding: 2rpx;
+}
+
+.notice {
+    margin: 20rpx;
+    padding: 10rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #666;
+    font-size: 24rpx;
+}

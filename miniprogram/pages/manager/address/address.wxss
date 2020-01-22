@@ -1,0 +1,163 @@
+.container {
+    padding: 20rpx 0 50rpx 0;
+}
+
+.tui-line-cell {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.tui-title {
+    line-height: 32rpx;
+    flex-shrink: 0;
+}
+
+.tui-input {
+    font-size: 32rpx;
+    color: #333;
+    padding-left: 20rpx;
+    flex: 1;
+}
+
+.radio-group {
+    margin-left: auto;
+    transform: scale(0.8);
+    transform-origin: 100% center;
+    flex-shrink: 0;
+}
+
+.tui-radio {
+    display: inline-block;
+    padding-left: 28rpx;
+    font-size: 36rpx;
+    vertical-align: middle;
+}
+
+.tui-btn-box {
+    padding: 40rpx 50rpx;
+    box-sizing: border-box;
+}
+
+.btn-gray {
+    margin-top: 30rpx;
+}
+
+.tui-tips {
+    padding: 30rpx;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.tui-content {
+    padding: 0rpx 30rpx;
+    background: #fff;
+    color: #555;
+    font-size: 26rpx;
+}
+
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.title-box-last {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.open {
+    opacity: 0.4
+}
+
+.title-box .title {
+    line-height: 30rpx;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+
+.opear {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+    align-items: center;
+}
+
+.tui-blue-hover {
+    background: #4a67d6 !important;
+    color: #e5e5e5 !important;
+}
+
+.tui-btn-blue {
+    background: #5677fc !important;
+    color: #fff;
+    box-shadow: 0 10rpx 14rpx 0 rgba(86, 119, 252, 0.2);
+}
+
+.tui-fillet {
+    border-radius: 50rpx;
+}
+
+.tui-btn-box {
+    padding: 10rpx 40rpx;
+    box-sizing: border-box;
+}
+
+.tui-modal-custom {
+    text-align: center;
+}
+
+.tui-modal-custom-text {
+    font-size: 30rpx;
+    color: #333;
+    padding: 20rpx 0;
+}
+
+
+/* 选择框 */
+
+.tui-selected-list {
+    background: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.tui-dropdown-scroll {
+    height: 60vh;
+    border: 1rpx solid #e6e6e6;
+}
+
+.tui-selected-item {
+    display: flex;
+    align-items: center;
+    padding: 26rpx 30rpx !important;
+}
+
+
+/* 选择框 */
+
+.tui-tips {
+    padding: 30rpx;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10rpx;
+}
+
+.btn-item {
+    width: 45%;
+    margin: 20rpx;
+}

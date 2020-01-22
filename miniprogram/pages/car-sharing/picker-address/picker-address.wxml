@@ -1,0 +1,4 @@
+<view class="container">
+<picker-2-view bindconfirm="change"></picker-2-view>>
+</view>
+

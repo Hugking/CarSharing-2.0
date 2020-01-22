@@ -1,0 +1,15 @@
+{
+  "navigationStyle": "default",
+  "navigationBarTitleText": "搜索",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundColorTop": "#fff",
+  "backgroundColorBottom": "#fafafa",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tui-button": "../../../../components/extend/button/button",
+    "tui-fab": "../../../../components/tui-fab/tui-fab",
+    "trip-card": "../../../../components/trip-card/trip-card",
+    "user-card": "../../../../components/user-card/user-card"
+  }
+}

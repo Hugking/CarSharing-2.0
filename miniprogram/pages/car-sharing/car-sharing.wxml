@@ -1,0 +1,44 @@
+<view class="base-card">
+	<base-card
+	 type="2"
+	 bind:time="time"
+	 bind:start="start"
+	 bind:end="end"
+	 textColor="{{textColor}}"
+	 startArray="{{startArray}}"
+	 endArray="{{endArray}}"
+	/>
+</view>
+<view class="container">
+	<view class="people-box">
+		<view style="color:{{textColor?textColor:'#8799a3'}}">
+			<peoNum-sel text="乘客人数：" bind:sel="peoNum" color="{{activeTextColor?activeTextColor:'#5677fc'}}" />
+		</view>
+	</view>
+	<view class="btn-box">
+		<view class="btn-item">
+			<tui-button
+			 type="blue"
+			 shadow="{{true}}"
+			 plain="{{false}}"
+			 bind:click="search"
+			>
+				我要拼车
+			</tui-button>
+		</view>
+		<view class="btn-item">
+			<tui-button
+			 type="blue"
+			 shadow="{{true}}"
+			 plain="{{true}}"
+			 bind:click="trip"
+			>
+				我的行程
+			</tui-button>
+		</view>
+	</view>
+	<view class="text">
+		<tui-nomore text="使用提示" visible="{{true}}" />
+		<view class="content">1、确保安全出行</view>
+	</view>
+</view>
